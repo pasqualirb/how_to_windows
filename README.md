@@ -65,7 +65,7 @@ How to install Windows
      2. Add the option: `/s S:` to `bcdboot`, where `S:` is the letter
         chosen for EFI partition plus a colon.
 
-Activate Windows
+How to activate Windows
 ===========================================================================
 
 If you are a developer, take a look [here](https://github.com/pasqualirb/MicrosoftLovesDevelopers).
