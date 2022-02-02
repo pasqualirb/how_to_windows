@@ -53,6 +53,16 @@ How to install Windows
      ```
      The EFI partition is detected automatically.
 
+Activate Windows
+===========================================================================
+
+If you are a developer, take a look [here](https://github.com/pasqualirb/MicrosoftLovesDevelopers).
+
+Otherwise, go to the following websites for buying your license:
+
+- Windows 10: https://www.microsoft.com/en-us/windows/get-windows-10
+- Windows 11: https://www.microsoft.com/en-us/windows/get-windows-11
+
 Disable PortableOperatingSystem flag if running on an USB drive
 ===========================================================================
 
