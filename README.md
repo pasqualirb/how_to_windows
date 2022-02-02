@@ -52,7 +52,18 @@ How to install Windows
      ```
      bcdboot C:\Windows
      ```
-     The EFI partition is detected automatically.
+     The EFI partition is detected automatically. For explicitly setting
+     the EFI partition:
+
+     1. Assign a letter to it with diskpart:
+        ```
+        select disk N
+        select partition N
+        assign letter="S"
+        ```
+        In the example above, "S" was chose by convention.
+     2. Add the option: `/s S:` to `bcdboot`, where `S:` is the letter
+        chosen for EFI partition plus a colon.
 
 Activate Windows
 ===========================================================================
