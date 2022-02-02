@@ -24,8 +24,8 @@ How to set up the bootable media
 1. Install [Ventoy](https://github.com/ventoy/Ventoy) on your USB flash
    drive.
 2. Install Ventoy's official [Wimboot Plugin](https://www.ventoy.net/en/plugin_wimboot.html).
-3. Extract boot.wim and install.wim from sources directory on Windows image
-   (.iso) and copy them to the flash drive.
+3. Extract `boot.wim` and `install.wim` from sources directory on Windows
+   image (.iso) and copy them to the flash drive.
 
 How to install Windows
 ===========================================================================
@@ -47,7 +47,7 @@ How to install Windows
      dism /Apply-Image /ImageFile:D:\install.wim /Index:6 /ApplyDir:C:\
      ```
      Index 6 corresponds to the Windows Professional edition.
-5. Setup EFI partition with the files just installed in C:\Windows
+5. Setup EFI partition with the files just installed in `C:\Windows`
      ```
      bcdboot C:\Windows
      ```
@@ -69,7 +69,7 @@ Disable PortableOperatingSystem flag if running on an USB drive
 When Windows is installed on an USB drive, Windows Update does not install
 updates and displays the following error message:
 
-  "You can't install Windows on a USB flash Drive using Setup"
+> "You can't install Windows on a USB flash Drive using Setup"
 
 For fixing this issue, disable the flag PortableOperatingSystem on Windows
 Registry by running the following command as administrador:
