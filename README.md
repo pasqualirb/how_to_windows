@@ -36,12 +36,13 @@ How to install Windows
      ```
      diskpart
      ```
-   Commands on diskpart's CLI:
+   Example commands on diskpart's CLI:
      ```
      select disk N
      select partition N
      format quick
      ```
+   For creating partitions, see [this guide](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/oem-deployment-of-windows-desktop-editions-sample-scripts?preserve-view=true&view=windows-10#-createpartitions-uefitxt).
 4. Apply `install.wim` image to C:\
      ```
      dism /Apply-Image /ImageFile:D:\install.wim /Index:6 /ApplyDir:C:\
