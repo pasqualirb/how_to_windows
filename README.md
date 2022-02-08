@@ -5,7 +5,7 @@ How to download Windows .iso file
 
 [This website](https://tb.rg-adguard.net/public.php), if working properly,
 returns an **official** link to the Windows .iso file according to the
-options choosed. If it does not return an official link (i.e. a link to
+options chosen. If it does not return an official link (i.e. a link to
 https://software-download.microsoft.com), please **DO NOT DOWNLOAD IT**.
 
 For the latest stable build, it's possible to download directly from
