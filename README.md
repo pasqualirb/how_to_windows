@@ -68,7 +68,7 @@ How to install Windows
 How to activate Windows
 ===========================================================================
 
-If you are a developer, take a look [here](https://github.com/pasqualirb/MicrosoftLovesDevelopers).
+If you are a developer, take a look [here](https://github.com/psqli/MicrosoftLovesDevelopers).
 
 Otherwise, go to the following websites for buying your license:
 
