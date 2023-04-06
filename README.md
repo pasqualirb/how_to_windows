@@ -32,11 +32,7 @@ How to install Windows
 
 1. Boot the flash drive with `boot.wim`.
 2. On the installation start screen, open terminal with `Shift+F10`.
-3. Format partition with diskpart:
-     ```
-     diskpart
-     ```
-   Example of a typical setup on diskpart's CLI:
+3. Format partition with `diskpart`:
      ```
      select disk 0
      clean
