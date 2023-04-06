@@ -36,21 +36,38 @@ How to install Windows
      ```
      diskpart
      ```
-   Example commands on diskpart's CLI:
+   Example of a typical setup on diskpart's CLI:
      ```
-     select disk N
-     select partition N
-     format quick
+     select disk 0
+     clean
+     convert gpt
+     
+     create partition efi size=100
+     format quick fs=fat32 label="System"
+     assign letter="S"
+     
+     create partition msr size=16
+     
+     create partition primary
+     shrink minimum=500
+     format quick fs=ntfs label="Windows"
+     assign letter="W"
+     
+     create partition primary
+     format quick fs=ntfs label="Recovery"
+     assign letter="R"
+     set id="de94bba4-06d1-4d40-a16a-bfd50179d6ac"
+     gpt attributes=0x8000000000000001
      ```
-   For creating partitions, see [this guide](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/oem-deployment-of-windows-desktop-editions-sample-scripts?preserve-view=true&view=windows-10#-createpartitions-uefitxt).
-4. Apply `install.wim` image to C:\
+   For more information on creating partitions, see [this guide](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/oem-deployment-of-windows-desktop-editions-sample-scripts?preserve-view=true&view=windows-10#-createpartitions-uefitxt).
+4. Apply `install.wim` image to W:\
      ```
-     dism /Apply-Image /ImageFile:D:\install.wim /Index:6 /ApplyDir:C:\
+     dism /Apply-Image /ImageFile:D:\install.wim /Index:6 /ApplyDir:W:\
      ```
      Index 6 corresponds to the Windows Professional edition.
-5. Setup EFI partition with the files just installed in `C:\Windows`
+5. Setup EFI partition with the files just installed in `W:\Windows`
      ```
-     bcdboot C:\Windows
+     bcdboot W:\Windows
      ```
      The EFI partition is detected automatically. For explicitly setting
      the EFI partition:
